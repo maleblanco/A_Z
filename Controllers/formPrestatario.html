@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../Views/Img/book1.png">
+	<link rel="stylesheet" type="text/css" href="../Views/CSS/formPrestatario.css">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+	<title>Prestatario</title>
+	
+	<style type="text/css">
+		fieldset{ width: 50%;
+			margin-left: 25%;
+			border-color: #6d2c6b;
+	 	}
+	 	a{
+			font-family: arial;
+			font-size: 11pt;
+			background-color: white;
+			color: black;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+        <div class="header">
+            <img src="../Views/Img/a2.svg" alt="" class="logo fl">
+            <h2 class="title"> De la A a la Z</h2>
+        </div>
+    </header>
+
+
+		<div class="overlay">
+
+			<form name="altaPrestatario" method="POST" action="">
+				<div class="con">
+
+				<header class="head_form">
+					<h2>Subir nuevo prestatario</h2>
+					
+					<p>Ingrese datos para un nuevo prestatario</p>
+				</header>
+				<br>
+					<div class="field-set">
+
+						<div class="fila">
+							<label class="clase nombre">Ingrese nombre</label>
+							<input class="coso input_nombre" type="text" name="nombre" minlength="3" required style="text-transform: capitalize;">
+						</div>
+
+						<div class="fila">
+							<label class="clase apellido">Ingrese apellido</label>
+							<input class="coso input_apellido" type="text" name="apellido" minlength="3" required style="text-transform: capitalize;">
+						</div>
+
+						<div class="fila">
+							<label class="clase dni">Ingrese dni</label>
+							<input class="coso input_dni" type="text" name="dni" minlength="8" maxlength="8" required>
+						</div>
+
+						<div class="fila">
+							<label class="clase tipo_p">Tipo de prestatario</label>
+								<select class="coso input_tipop" name="tipo" id="tipo" required>
+									<option> </option>
+									<option value=1>alumno</option>
+									<option value=2>profesor</option>
+									<option value=3>socio</option>
+								</select>						
+						</div>
+
+						<div class="fila">
+							<label class="clase carnet">Carnet</label>
+							<input class="coso input_carnet" type="number" name="carnet" id="carnet" disabled="true" required minlength="4" maxlength="5">				
+						</div>
+
+						<div class="fila">
+							<label class="clase curso">Curso</label>
+							<input class="coso input_curso" type="text" name="curso" id="curso" disabled="true" required minlength="4" maxlength="4">				
+						</div>
+
+						<div class="cont_eli">
+							<input type="submit" class="continuar" name="continuar" value="continuar"> 
+					
+						</div>
+
+					</div>
+			</form>	
+
+			
+
+		</div>
+			<script src="Js/auxAltaP.js"></script>
+			
+
+				<button class="btn_volver" onclick="volver()"><i class='bx bx-arrow-back'></i></button>
+
+
+	<script>
+		function volver(){
+			window.location.href = "../indexAdmin.html";
+		}
+	</script>
+ 
+</body> 
+</html>

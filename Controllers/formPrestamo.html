@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../Views/Img/book1.png">
+	<script src="https://kit.fontawesome.com/de9cdb50bb.js" crossorigin="anonymous"></script>
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="../Views/CSS/formPrestamo.css">
+	
+	<script src="Js/sweetalert.min.js"></script>
+
+	<title>Prestamo</title>
+
+	<!-- Para select con buscador -->
+	<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../Views/CSS/select2.min.css">
+	<script type="text/javascript" src="js/main3.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body> 
+
+	<header>
+        <div class="header">
+            <img src="../Views/Img/a2.svg" alt="" class="logo fl">
+            <h2 class="title"> De la A a la Z</h2>
+        </div>
+    </header>
+
+	<div class="overlay">
+
+		<form name="formPrestamo" action="formPrestamo.php" method="POST">
+		
+			<div class="con">
+			
+				<header class="head_form">
+
+					<h2>Subir nuevo préstamo</h2>				
+					<p>Ingrese datos para realizar un nuevo préstamo</p>
+				
+				</header>
+			
+				<br>
+
+					<div class="field-set">
+						<div class="fila">
+							<label id="label_libro" class="clase libro">Seleccione libro</label>
+								<select id="coso select_predeterminado" name="libro" class="js-example-basic-single" required>
+									<option>Elija un libro</option>
+									<option>Los 7 maridos de Evelyn Hugo</option>
+									<option>Cometierra</option>
+									<option>Bajo la misma estrella</option>
+								</select>
+							</label>
+						</div>
+						
+						<div class="fila2">
+							<label id="label_prestatario" class="clase prestatario">Seleccione prestatario</label>
+								<select id="coso select_predeterminado2" name="prestatario" class="js-example-basic-single" required>
+									<option>Elija un prestatario</option>
+									<option>Juan Gomez</option>
+									<option>Luis Garcia</option>
+									<option>Martina Diaz</option>
+								</select>
+							</label>
+						</div>
+					</div>	
+			
+			<div class="cont_eli">
+				<input type="submit" class="continuar" name="continuar" id="verAlerta" value="Ver Alerta"> 
+				<a class="cancelar" href="../indexAdmin.html">cancelar</a>	
+			</div>
+		</form>
+	</div>
+
+	<button class="btn_volver" onclick="volver()"><i class='bx bx-arrow-back'></i></button>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+	</script>
+	<script>
+		function volver(){
+			window.location.href = "../indexAdmin.html";
+		}
+
+
+	</script>
+	<!-- <script src="Js/auxFormPrestamo.js"></script> -->
+ 
+</body>
+</html> 
+

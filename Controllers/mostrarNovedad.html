@@ -1,0 +1,29 @@
+<?php
+
+include 'Models/abrirConexion.php';
+include 'Models/funcionesNovedad.php';
+
+$nov=mostrarNovedad();
+$aux=0;
+
+while($nove = mysqli_fetch_assoc($nov)){
+	//echo $nove ['titulo'];
+	$titulos[$aux]=$nove ['titulo'];
+	if($nove ['descripcion']==NULL){
+		//echo "Descripcion no disponible."; 
+		$descripcion[$aux]="Descripcion no disponible.";
+	}else{
+		//echo $nove ['descripcion'];
+		$descripcion[$aux]=$nove ['descripcion'];
+	}
+	if ($nove ['imagen']==NULL) {
+		$img[$aux]="Imagen no disponible";
+	}else{
+		$img[$aux]=$nove ['imagen'];	
+	}
+	//echo $nove ['imagen'];
+	$aux++;
+}
+
+
+?>

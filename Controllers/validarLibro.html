@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../Views/Img/book1.png">	
+	<title>Libro</title>
+
+	<script type="text/javascript">
+		var PbuscarAutor=document.getElementById('PbuscarAutor');
+		var PnombreAutor=document.getElementById('PnombreAutor');
+		//var PnuevoAutor=document.getElementById('PnuevoAutor');
+		var SbuscarAutor=document.getElementById('SbuscarAutor');
+
+		SbuscarAutor.addEventListener('click', function(){
+			PnombreAutor.hidden=false;
+		});
+	</script>
+</head>
+<body bgcolor="#9d599a">
+
+	<fieldset align="center"><legend ><h2 >Subir nuevo libro</h2></legend>
+	<form align="center" method="post" action="">
+
+	<p id="PbuscarAutor">Buscar Autor <input type="text" name="autor"><input type="submit" name="s-autor" id="SbuscarAutor" value="Buscar"></p>
+	<!-- <p>Buscar Genero <input type="text" name="genero"><input type="submit" name="s-genero" id="s-genero" value="Buscar"></p> -->
+	</form>
+
+
+	
+	<form  name="datosLibro" method="POST" action="../Models/altalibroprueba.php">
+		<!-- <p>Nombre del libro <input type="text" name="titulo" style="text-transform: capitalize;" required minlength="3" maxlength="50"></p>
+ -->
+		
+		<p id="PnombreAutor" hidden>Nombre del autor <select id="autor" name="autor" required>
+			<option></option>
+			<?php	foreach ($autor as $value) { ?>
+			<option value= <?php echo $value; ?> >
+				<?php echo $value; ?> 
+			</option>
+			<?php } ?>
+			<option value="a">Otro autor</option>
+		</select></p>
+
+		<p id="PnuevoAutor" hidden>Ingrese nuevo autor<input type="text" id="newAutor" name="newAutor" style="text-transform: capitalize;" required minlength="7" maxlength="50" disabled></p>
+
+
+	</form>
+	</fieldset>
+	<script src="Js/auxAltaL.js"></script>
+
+
+</body>
+</html>
+

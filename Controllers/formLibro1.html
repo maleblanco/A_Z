@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" href="../Views/Img/book1.png">
+	<link rel="stylesheet" type="text/css" href="../Views/CSS/formLibro.css">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+	<title>Libro</title>
+
+	<!-- Para select con buscador -->
+	<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+
+var autor=document.getElementById('autor');
+var newAutor=document.getElementById('newAutor');
+
+autor.addEventListener('click', function(){
+	console.log("click");
+	var autorValue = autor.options[autor.selectedIndex].value;
+	console.log(autorValue);
+	if(autorValue=="a"){
+		autor.disabled=true;
+		newAutor.disabled=false;
+
+	}
+});
+
+var genero = document.getElementById('genero');
+var newGenero=document.getElementById('newGenero');
+console.log(genero);
+
+genero.addEventListener('click', function(){
+	console.log(genero);
+	/*var elementoElegido = genero.options[genero.selectedIndex].value;
+	console.log(elementoElegido);
+	if(elementoElegido=="a"){
+		genero.disabled=true;
+		newGenero.disabled=false;
+
+	}*/
+});
+
+var editorial=document.getElementById('editorial');
+var newEditorial=document.getElementById('newEditorial');
+
+editorial.addEventListener('click', function(){
+	console.log("click");
+	var editorialValue = editorial.options[editorial.selectedIndex].value;
+	console.log(editorialValue);
+	if(editorialValue=="e"){
+		editorial.disabled=true;
+		newEditorial.disabled=false;
+
+	}
+});
+</script>
+
+<body>
+
+<header>
+        <div class="header">
+            <img src="../Views/Img/a2.svg" alt="" class="logo fl">
+            <h2 class="title"> De la A a la Z</h2>
+        </div>
+    </header>
+
+			<button class="btn_volver" onclick="volver()"><i class='bx bx-arrow-back'></i></button>
+
+	<div class="overlay">
+		<form name="datosLibro" method="POST" action="Php/formLibro.html">
+			<div class="con">
+
+				<header class="head_form">
+					<h2>Subir nuevo libro</h2>
+
+					<p id="p">Ingrese datos para un nuevo libro</p>
+				</header>
+
+				<br>
+				<div class="field-set">
+
+					<div class="fila">
+						<label class="clase">Nombre del libro</label>
+						<input type="text" class="coso input_nl" name="titulo" style="text-transform: capitalize;" required minlength="3" maxlength="70">
+					</div>
+
+					<div class="fila">
+						<label class="clase">Subtitulo del libro</label>
+						<input type="text" class="coso input_sb" name="subtitulo" style="text-transform: capitalize;"  maxlength="70">
+					</div>
+
+					<div class="fila">
+						<label class="clase">Nombre del autor</label>
+						<!-- <select id="autor" class="coso select_au" name="autor" required>  -->
+						<select id="autor"  class="js-example-basic-single" name="autor" required> 
+							<option></option>
+							
+							<option></option> 
+								
+
+							<option value="a">Otro autor</option>
+						</select>
+					</div>
+
+					<div class="fila">
+						<label class="clase">Ingrese nuevo autor</label>
+						<input type="text" class="coso input_nwa" id="newAutor" name="newAutor" style="text-transform: capitalize;" required minlength="7" maxlength="50" >
+					</div>
+
+					<div class="fila">
+						<label class="clase">Editorial</label>
+						<!-- <select id="editorial" class="coso select_ed" name="editorial" required> -->
+						<select id="editorial" class="js-example-basic-single" name="editorial" required>
+							<option></option>
+							
+								<option></option>
+								
+							
+
+							<option value="e">Otro editorial</option>
+						</select>
+					</div>
+
+					<div class="fila">
+						<label class="clase">Nueva editorial</label>
+						<input type="text" class="coso input_nwe" id="newEditorial" name="newEditorial" style="text-transform: capitalize;" >
+					</div>
+
+					<div class="fila">
+						<label class="clase">Cantidad de libros</label>
+						<input type="number" class="coso input_cant" id="cantidad" name="cantidad" min="1" required></p>
+						<div id="info"></div>
+					</div>
+
+					<div class="fila">
+						<label class="clase">Genero del libro</label>
+						<!-- <select id="genero" class="coso input_genero" name="genero" required> -->						
+						<select id="genero" class="js-example-basic-single" name="genero" required>
+							<option></option>
+							
+								<option>
+									
+								</option>
+							
+							<option value="a">Otro genero</option>
+						</select>
+
+					</div>
+
+					<div class="fila">
+						<label class="clase">Ingrese género</label>
+						<input type="text" class="coso input_nwg" id="newGenero" name="newGenero" style="text-transform: capitalize;" required minlength="5" maxlength="30" >
+						<div id="info"></div>
+					</div>
+
+					<div class="fila">
+						<label class="clase">Dias de prestamo</label>
+						<input type="number" class="coso input_diasp" name="dias" required>
+					</div>
+
+					<div class="fila">
+						<label class="clase">Direccion de la imagen</label>
+						<input type="url" class=" coso input_img" name="img">
+					</div>
+
+					<div class="fila">
+						<label class="clase">Breve descripcion:</label>
+						<textarea class="coso descrip" name="desc" id="desc" maxlength="500" placeholder="máx 500 caracteres"></textarea>
+					</div>
+					
+					
+						<input type="submit" class="continuar" name="continuar" value="continuar"> 
+					
+
+		</form>
+		</fieldset>
+
+
+	<script>
+		function volver(){
+			window.location.href = "../indexAdmin.html";
+		}
+	</script>
+
+</body>
+
+</html>
