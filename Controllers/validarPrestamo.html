@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../Views/Img/book1.png">
+	<link rel="stylesheet" type="text/css" href="../Views/CSS/validarPrestamo.css">
+	<title>Prestamo</title>
+
+</head>
+ 
+
+<div class="overlay">
+
+	<form name="miFormu" id="lapiz" action="formPrestamo.php" method="POST">
+		
+		<div class="con">
+			
+			<header class="head_form">
+				<h2>Confirmar datos de Préstamo</h2>
+					
+				<p>Confirme los datos de Préstamo</p>
+			</header>
+			
+			<br>
+				<div class="field-set">
+			
+					<p class="libro"><input type="hidden" name="libro" id="libro" value="<?php echo $idLibro;?>" readonly> Libro: <?php echo $nameLibro; ?></p>
+					<p class="prestatario"><input type="hidden" name="prestatario" id="prestatario" value="<?php echo $idPrestatario;?>" readonly> Prestatario: <?php echo $namePrestatario; ?></p>
+					<p class="disponible">Disponible: <?php echo getDisponible($idLibro); ?></p>
+				
+				</div>
+				
+				<div class="contenedorDeFilas">
+					<div id="fila">
+						<label class="clase label_cantidad">Cantidad</label>
+						<input type="number" class="coso input_cantidad" name="cantidad" id="cantidad" min=1 max=<?php echo $cantidad; ?>></p>
+					</div>
+
+					<div id="fila">
+						<label class="clase fecha_act">Fecha Actual</label>
+						<input type="date" class="coso fechaPrestamo"  name="fechaPrestamo" id="fechaPrestamo" readonly value=<?php echo $fechaPrestamo;?>>
+					</div>
+
+					<div id="fila">
+						<label class="clase fecha_dev">Fecha a Devolver</label>
+						<input type="date" class="coso fechaDevolucion" name="fechaDevolucion" id="fechaDevolucion" value=<?php echo $fechaDevolucion; ?> readonly>
+					</div>
+
+					<div id="fila">
+						<label class="clase estado">Estado de Préstamo</label>
+						<input type="text" class="coso estadoPrestamo" name="estadoPrestamo" id="estadoPrestamo" value="pendiente" readonly></p>
+					</div>
+
+					<div class="cont_eli">
+						<input type="submit" class="confirmar" name="Confirmar" id="Confirmar Datos" value="Confirmar datos"> 
+						<a class="cancelar" href="formPrestamo.php">cancelar</a>	
+					</div>
+
+				</div>
+					
+		</div>			
+	</form>
+				
+	
+
+</body>
+</html>
