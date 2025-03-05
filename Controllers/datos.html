@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="../../Views/CSS/datos.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/de9cdb50bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="icon" href="Views/Img/book1.png">
+
+    <title>Ver datos</title>
+                
+</head>
+    <body> 
+        <header>
+            <div class="header">
+                <img src="../../Views/Img/a2.svg" alt="" class="logo fl">
+                <h2 class="title"> De la A a la Z</h2>
+            </div>
+        </header>
+
+
+        <!--div id='search-box'>
+            <form action='datos.php' id='search-form' method='get' target='_top'>
+            <input id='search-text' name='busqueda' placeholder='Buscar socio, alumno o profesor' type='text'/>
+            <button id='search-button' type='submit' name="enviar"><span>Buscar</span></button>
+            </form>
+        </div-->
+
+        <button class="btn_volver" onclick="volver()"><i class='bx bx-arrow-back'></i></button>
+
+
+        <form action='datos.php' id='search-form' method='get' target='_top'>
+            <div class="entrada_cont">
+                
+                <input id='search-text' name='busqueda' type="text" placeholder="Buscar socio, alumno o profesor">
+                <div class="cont1">
+                    <div class="cont2">
+                        <button id='search-button' type='submit' name="enviar"><i class='bx bx-search-alt'></i></button>
+                         
+                    </div>
+                </div> 
+            </div> 
+        </form>
+
+        <form name="formFiltro" class="formFiltro" action="datos.php" method="post">
+            
+            <select class="browser-default filtro" name="tipo">
+                <option value="ds" disabled selected ds></option>
+                <option value="alumno">Alumno</option>
+                <option value="socio">Socio</option>
+                <option value="profesor">Profesor</option>
+            </select>
+            <input type="submit" class="filtrar" name="filtrar" value="Filtrar">
+            <button type='submit' class="actualizar" name="actualizar"><span>Actualizar registros</span></button>
+
+        </form>
+        <br>
+
+        <center>
+            <div class="contenedor">  
+                <table id="tabla" class="tabla1">
+                    <thead> 
+                        <tr>
+                            <th>Nombre y apellido</th>
+                            <th>DNI</th>
+                            <th>Carnet</th>
+                            <th>Curso</th>
+                            <th>Último Registro</th>
+                            <th>Asociar</th>
+                        </tr>
+                    </thead>
+                        
+                    <tbody>
+                        
+                        <?php
+                        while( $alumno = mysqli_fetch_assoc($resultado) ) {
+                        ?>
+                            <tr id="<?php echo $alumno['nombre'].$alumno ['apellido']; ?>">
+                            <td><?php echo $alumno['nombre']." ".$alumno['apellido']." (".$alumno['tipo'].")"; ?></td> 
+                            <td><?php echo $alumno['dni']; ?></td>
+                            <?php
+                                if ($alumno['tipo']=="alumno"||$alumno['tipo']=="socio") {
+                                ?>
+                                    <td><?php echo $alumno ['carnet']; ?></td> 
+                                    <?php
+                                    if ($alumno ['curso']==0) {
+                                    ?>
+                                        <td><form action="datos.php" method="post">
+                                                <input type="text" name="curso" maxlength="4" minlength="4" required>
+                                                <button type='submit' name="agregar" value="<?php echo $alumno ['id']; ?>"><span>Agregar curso</span></button>
+                                            </form>
+                                        </td>
+                                    <?php
+                                    }else{?>
+                                        <td><?php echo $alumno ['curso']; ?></td>
+                                        <?php
+                                        }
+                                        ?>        
+                                <?php
+                                }else{
+                                ?>
+                                    <td>-</td>
+                                    <td>-</td>
+                                <?php
+                                }
+                                ?>
+                            <td><?php echo $alumno['fecha']; ?></td>
+                                <?php
+                                if ($alumno['tipo']=="alumno") {
+                                ?>
+                                    <td><form action="datos.php" method="post"><button type='submit' class="btn_asociar" name="asociar" value="<?php echo $alumno ['idPrestatario']; ?>">Asociar</button></form></td>
+                                <?php
+                                }else{
+                                    ?>
+                                    <td></td>
+                                <?php
+                                }
+                                ?>
+                        </tr> 
+                        <?php 
+                        }
+
+                    if (isset($_POST['asociar'])) {
+                        $id=$_POST['asociar'];
+                        setSocio($id);
+                    }
+                    if (isset($_POST['actualizar'])) {
+                        actualizarRegistros();
+                    }
+                    if (isset($_POST['agregar'])) {
+                        $id=$_POST['agregar'];
+                        $curso=$_POST['curso'];
+                        setCurso($curso, $id);
+                    }
+                    ?>
+                    </tbody>
+                </table>    
+            </div>
+        </center>
+
+<script>
+	function volver(){
+		window.location.href = "../../indexAdmin.html";
+	}
+</script>
+
+    </body>
+</html>
