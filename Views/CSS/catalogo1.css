@@ -1,0 +1,580 @@
+/*como importar fuentes desde google*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Yeseva+One&display=swap&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+	font-family: 'Segoe UI';
+}
+
+:root {
+    /* ---coloress--- */
+    --body-color:    #9D6B53;
+    --header: #A07754;
+    /*--body-color: #C69DC4;*/
+    --sidebar-color: #DDB892;
+    --primary-color: #C19071;
+    --primary-color-light: #B08968;
+    --toggle-color: #E9C4CC;
+    --text-color: black;
+    --verde-color: #BDB2FF;
+    --verdeclaro-color: #F9DEDC;
+    --letra-negra: black;
+    --letra-blanca: white;
+    --footer: #7f5539;
+    --body-verdadero: #faedcd;
+
+    /* ---transiciones--- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+    /* ---fuentes--- */
+    --fuente1: 'Abhaya Libre', serif;
+    --fuente2: 'Bellota', cursive;
+    --fuente3: 'DM Serif Text', serif;
+    --fuente4: 'Inria Serif', serif;
+    --fuente5: 'Roboto', sans-serif;
+    --fuente6: 'Poppins', sans-serif;
+    --fuente7: 'Yeseva One', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--body-verdadero);
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+
+.header {
+    position: fixed;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.109);
+}
+
+.container{
+    z-index: 0!important;
+}
+
+.fl {
+    float: left;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.header .title {
+    font-size: 25pt;
+    color: white;
+    margin-top: 10px;
+}
+
+
+#filtrando{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+/*.busc{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+/*.filtro{
+    width: 120px;
+    position: absolute;
+    right: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+option{
+    font-weight: bold;
+    color: #18191a;
+}  */ 
+
+
+
+
+
+/*buscador*/
+#search-button {
+    background-color: transparent;
+    border: none;
+}
+#search-button i{
+    font-size: 20px;
+}
+.centrar{
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.entrada_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+.entrada_cont #input1{
+    width: 120px;
+    height: 50px;
+	color: black;
+    background-color: white;
+    margin: 0 0 0 0;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50px 0px 0px 50px;
+
+    padding-left: 22px;
+    font-size: 18px;
+    transition: all .5s ease;
+}
+.entrada_cont #input1:hover{
+    width: 250px;
+}
+
+.cont1{
+    width: 50px;
+    height: 50px;
+
+	background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 50px 50px 0px;
+}
+.cont2{
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont2 img{
+    background-color: var(--body-color)!important;
+}
+
+/*tarjetas*/
+
+.container{
+    z-index: 0!important;
+}
+
+.primerosCuatro{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+.segundosCuatro{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.contenedor{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.contenedor1{
+    margin-top: -290px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.card{
+    height: 260px;
+    width: 260px;
+}
+.card-image{
+    width: 260px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.card-title .plus{
+    position: absolute;
+    bottom: 10px;
+    float: right;
+    right: 10px;
+}
+.card-title .atras  {
+    float: right;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.card .card-content .card-title span{
+    display: block;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+#titulo{
+    display: block;
+    line-height: 32px;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.card-content .titulo{
+    font-size: 16pt!important;
+    font-weight: bold;
+    
+}
+.card-content .titulo i{
+    font-size: 16pt;
+}
+.card-content .autor{
+    font-size: 11pt;
+    font-style: italic; 
+}
+
+.card-reveal .titulo2{
+    margin-top: 0px;
+    color: black;
+    font-size: 15pt;
+    font-weight: bold;
+}
+.card-reveal .autor2{
+    color: black;
+    margin-top: 20px!important;
+    font-size: 11pt;
+    font-style: italic;
+}
+.card-reveal .genero{
+    color: black;
+    font-size: 11pt;
+    margin-top: 70px!important;
+}
+.card-reveal .anio{
+    color: black;
+    font-size: 11pt;
+}
+.card-reveal .unidad{
+    color: black;
+    font-size: 11pt;
+}
+
+
+
+.page-footer{
+    height: 40%;
+    background-color: var(--primary-color);
+    margin-top: 100px;
+}
+.contenido  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    background-color: var(--primary-color);
+}
+.nos-txt{
+    font-size: 20pt;
+    text-align: center;
+}
+.sig-txt{
+    font-size: 20pt;
+    text-align: center;
+}
+.red-social{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer2{
+    height: 60px;
+    text-align: center;
+    background-color: #635068;
+    margin-top: -20px;
+}
+.footer2 p{
+    margin-top: 20px;
+}
+
+/* filtro */
+.formFiltro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100px;
+}
+.filtro{
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-color-light);
+    border: none;
+    margin-right: 20px;
+}
+.filtrar{
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-color-light);
+    border: none;
+}
+
+
+
+@media (orientation: portrait) {
+    .body{
+        width: 100%;
+    }
+    .entrada_cont #input1{
+        width: 100px;
+        height: 50px;
+        color: black;
+        background-color: white;
+        margin: 0 0 0 0;
+    
+        border: none;
+        outline: none;
+    
+        border-radius: 50px 0px 0px 50px;
+    
+        padding-left: 22px;
+        font-size: 18px;
+        transition: all .5s ease;
+    }
+    .entrada_cont #input1:hover{
+        width: 200px;
+    }
+}
+
+@media (orientation: portrait) {
+    .contenedor{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 80px;
+        margin-bottom: -70px;
+    }
+    /*.busc{
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .filtro{
+        width: 100px;
+        position: absolute;
+        left: 30px;
+        top: 220px;
+        border-radius: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    option{
+        font-weight: bold;
+        color: #18191a;
+    } */  
+}
+
+/* BTN VOLVER */
+.btn_volver{
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	border-radius: 180px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: var(--body-color); /* Color de fondo */
+	padding: 18px 20px; /* Relleno del boton */
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+    text-align: center;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+    border: none;
+}
+.btn_volver:hover{
+    background-color: var(--sidebar-color); /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-volver {
+       font-size: 14px;
+       padding: 12px 20px;
+       bottom: 20px;
+       right: 20px;
+   }
+} 
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .card{
+        height: 200px;
+        width: 200px;
+    }
+    .card-image{
+        width: 200px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .card-title .plus{
+        position: absolute;
+        bottom: 10px;
+        float: right;
+        right: 10px;
+    }
+    .card-title .atras  {
+        float: right;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .card .card-content .card-title span{
+        display: block;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+    
+    #titulo{
+        display: block;
+        line-height: 32px;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    
+    .card-content .titulo{
+        font-size: 15pt!important;
+        font-weight: bold;
+        
+    }
+    .card-content .titulo i{
+        font-size: 16pt;
+    }
+    .card-content .autor{
+        font-size: 10pt;
+        font-style: italic; 
+    }
+    
+    
+    .card-reveal .titulo2{
+        margin-top: 0px;
+        color: black;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+    .card-reveal .autor2{
+        color: black;
+        margin-top: 20px!important;
+        font-size: 10pt;
+        font-style: italic;
+    }
+    .card-reveal .genero{
+        color: black;
+        font-size: 10pt;
+        margin-top: 70px!important;
+    }
+    .card-reveal .anio{
+        color: black;
+        font-size: 10pt;
+        top: 150px;
+        position: absolute; 
+    }
+    .card-reveal .unidad{
+        position: absolute;
+        color: black;
+        font-size: 10pt;
+        top: 170px;
+        position: absolute; 
+    }
+        
+  }

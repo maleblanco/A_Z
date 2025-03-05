@@ -1,0 +1,198 @@
+/*como importar fuentes desde google*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Yeseva+One&display=swap&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ---coloress--- */
+    --body-color:   #735D78;
+    /*--body-color: #C69DC4;*/
+    --sidebar-color: #D1B3C4;
+    --primary-color: #A37B9A;
+    --primary-color-light: #B392AC;
+    --toggle-color: #E9C4CC;
+    --text-color: black;
+    --verde-color: #BDB2FF;
+    --verdeclaro-color: #F9DEDC;
+    --letra-negra: black;
+    --letra-blanca: white;
+    /* ---transiciones--- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+    /* ---fuentes--- */
+    --fuente1: 'Abhaya Libre', serif;
+    --fuente2: 'Bellota', cursive;
+    --fuente3: 'DM Serif Text', serif;
+    --fuente4: 'Inria Serif', serif;
+    --fuente5: 'Roboto', sans-serif;
+    --fuente6: 'Poppins', sans-serif;
+    --fuente7: 'Yeseva One', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--body-color);
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+
+.header {
+    position: fixed;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.109);
+}
+
+.container{
+    z-index: 0!important;
+}
+
+.fl {
+    float: left;
+}
+
+.logo {
+    height: 35px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+.header .title {
+    font-size: 25pt;
+    margin-top: 20px;
+    }
+
+
+.container{
+    margin-top: 80px;
+}
+
+.collapsible-header{
+    margin-top: -20px;
+    background-color: var(--primary-color);
+}
+.collapsible-body{
+    width: 100%;
+    background-color: var(--primary-color-light); 
+}
+
+.yeseva{
+    font-family: 'Yeseva One', cursive;
+    font-size: 40pt!important;
+    color: white;
+}
+
+
+ 
+
+
+
+#p_f{
+    width: 100%;
+    height: 40%;
+    background-color: var(--primary-color);
+    margin-top: 100px;
+    color: white;
+}
+.row img{
+    width: 300px;
+    height: 250px;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    background-color: var(--primary-color);
+}
+.nos-txt{
+    font-size: 20pt;
+    text-align: center;
+}
+.sig-txt{
+    font-size: 20pt;
+    text-align: center;
+}
+.red-social{
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--body-color);
+    text-decoration: none;
+}
+.footer2{
+    height: 60px;
+    text-align: center;
+    background-color: #635068;
+    margin-top: 0px;
+}
+.footer2 p{
+    margin-top: 20px;
+}
+
+.fa-twitter:before {
+    content: "\f099";
+    color: #635068;
+}
+.fa-facebook:before {
+    content: "\f099";
+    color: #635068;
+}
+.fa-instagram:before {
+    content: "\f099";
+    color: #635068;
+}
+.fa-youtube:before {
+    content: "\f099";
+    color: #635068;
+}
+
+
+
+@media (orientation: portrait) {
+    .yeseva{
+            font-family: 'Yeseva One', cursive;
+            font-size: 30pt!important;
+            color: white;
+    }
+}
+
+

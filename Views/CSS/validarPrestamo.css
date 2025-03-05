@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Yeseva+One&display=swap&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ---coloress--- */
+    --body-color:    #9D6B53;
+    --header: #A07754;
+    /*--body-color: #C69DC4;*/
+    --sidebar-color: #DDB892;
+    --primary-color: #C19071;
+    --primary-color-light: #B08968;
+    --toggle-color: #E9C4CC;
+    --text-color: black;
+    --verde-color: #BDB2FF;
+    --verdeclaro-color: #F9DEDC;
+    --letra-negra: black;
+    --letra-blanca: white;
+    --footer: #7f5539;
+    --h2-color: #f1dac5;
+    /* ---transiciones--- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+    /* ---fuentes--- */
+    --fuente1: 'Abhaya Libre', serif;
+    --fuente2: 'Bellota', cursive;
+    --fuente3: 'DM Serif Text', serif;
+    --fuente4: 'Inria Serif', serif;
+    --fuente5: 'Roboto', sans-serif;
+    --fuente6: 'Poppins', sans-serif;
+    --fuente7: 'Yeseva One', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #faedcd;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+    color: #18191a;
+}
+
+h2{
+    font-weight: normal;
+}
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+
+.header {
+    position: fixed;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.109);
+}
+
+.container{
+    z-index: 0!important;
+}
+
+.fl {
+    float: left;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.header .title {
+    font-size: 25pt;
+    color: white;
+    margin-top: 10px;
+}
+
+
+
+/*DATOS DEL PRESTAMO*/
+
+
+form{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+
+input, a{
+    font-size: 20pt;
+    background-color: var(--primary-color);
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    gap: 10px;
+}
+input, a:hover{
+    background-color: var(--primary-color-light);
+}
+
+
+/* FORMULARIO */
+
+form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    /*margin: 2% auto;*/
+    box-shadow: 0 9px 50px #755b4f(293, 64%, 80%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #B08968 60%, #DDB892  40%);}
+
+.head_form {
+    margin: 2% auto 10% auto;
+    text-align: center;
+}
+
+.head_form h2 {
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    color: var(--h2-color);
+}
+
+.head_form p {
+    letter-spacing: 0.05em;
+}
+
+#libro{
+    height: 30px;
+    width: 150px;
+
+}
+#prestatario{
+    height: 30px;
+    width: 150px;
+
+}
+
+.libro{
+    font-size: 14pt;
+    margin-top: 20px;
+    text-align: center;
+}
+.prestatario{
+    font-size: 14pt;
+    text-align: center;
+}
+.disponible{
+    font-size: 14pt;
+    text-align: center;
+}
+
+/*form .con {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+      margin: 0 auto;
+}*/
+
+/* INPUT Y LINK */
+
+/*input{
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    color: #252537;
+  
+    width: 280px;
+    height: 50px;
+  
+    /*padding: 0 20px;*//*
+    background: #fff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    transition: all 0.2s linear;
+    
+    letter-spacing: 0.05em;
+    
+    margin-left: 60px;
+}*/
+
+
+
+
+/* buttons hover */
+
+input:hover {
+    background-color: #d3c6d0;
+    box-shadow: none;
+}
+a:hover {
+    background-color: #d3c6d0;
+    box-shadow: none;
+}
+
+
+
+
+
+label .clase{
+    font-size: 14pt;
+    text-align: center;
+}
+
+/*#fechaPrestamo{
+    text-align: center;
+    width: 280px;
+    margin-top: 10px;
+}
+#fechaDevolucion{
+    text-align: center;
+    width: 280px;
+    margin-top: 10px;
+}
+#estadoPrestamo{
+    text-align: center;
+    width: 280px;
+    margin-top: 10px;
+}*/
+
+.confi{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+
+.input_cantidad, .fechaPrestamo, .estadoPrestamo, .fechaDevolucion{
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    color: #252537;
+    text-align: center;
+  
+    height: 40px;
+    width: 20%;
+  
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    transition: all 0.2s linear;
+    
+    letter-spacing: 0.05em;
+}
+
+/*botones eliminar y continuar*/
+
+.cont_eli{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont_eli .confirmar {
+    font-size: 11pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    color: white;
+  
+    width: 200px;
+    height: 50px;
+  
+    padding: 0 20px;
+    background: var(--body-color);
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    transition: all 0.2s linear;
+    
+    letter-spacing: 0.05em;
+    
+    margin-top: 50px;
+    margin-right: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont_eli a{
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+      
+    width: 200px;
+    height: 50px;
+      
+    padding: 15px;
+    background: var(--body-color);
+    border-radius: 5px;
+        
+    outline: none;
+    border: none;
+      
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+        
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+#fila{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: -20px;
+    height: 60px;
+    align-items: center;
+}
+
+.contenedorDeFilas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.clase{
+    text-align: left!important;
+    flex: 1 0 40%;
+    font-size: 14pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.coso{
+    height: 40px;
+    flex: 1 0 45%;
+}
+
+
+/* CONFIRMAR Y CANCELAR*/
+.confi {
+    font-size: 11pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    color: white;
+  
+    width: 200px;
+    height: 50px;
+  
+    padding: 0 20px;
+    background: #d2a4e9;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    transition: all 0.2s linear;
+    
+    letter-spacing: 0.05em;
+    
+    /* margin-left: 60px; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    color: white;
+    text-align: center;
+      
+    width: 200px;
+    height: 50px;
+      
+    padding: 15px;
+    background: rgb(173, 168, 168);
+    border-radius: 5px;
+        
+    outline: none;
+    border: none;
+      
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+        
+    letter-spacing: 0.05em;
+    
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}

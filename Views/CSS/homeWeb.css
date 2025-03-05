@@ -1,0 +1,560 @@
+/*como importar fuentes desde google*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Yeseva+One&display=swap&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ---coloress--- */
+    --body-color:    #9D6B53;
+    --header: #A07754;
+    /*--body-color: #C69DC4;*/
+    --sidebar-color: #DDB892;
+    --primary-color: #C19071;
+    --primary-color-light: #B08968;
+    --toggle-color: #E9C4CC;
+    --text-color: black;
+    --verde-color: #BDB2FF;
+    --verdeclaro-color: #F9DEDC;
+    --letra-negra: black;
+    --letra-blanca: white;
+    --footer: #7f5539;
+    --body-verdadero: #fefae0;
+
+    /* ---transiciones--- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+    /* ---fuentes--- */
+    --fuente1: 'Abhaya Libre', serif;
+    --fuente2: 'Bellota', cursive;
+    --fuente3: 'DM Serif Text', serif;
+    --fuente4: 'Inria Serif', serif;
+    --fuente5: 'Roboto', sans-serif;
+    --fuente6: 'Poppins', sans-serif;
+    --fuente7: 'Yeseva One', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--body-verdadero);
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+/* .wave{
+    height: 150px; 
+    overflow: hidden;
+    z-index: 10;
+    height: 100%; 
+    width: 100%;
+    stroke: none;
+    fill: var(--primary-color);
+} */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+
+.header {
+    position: fixed;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.109);
+}
+
+.container{
+    z-index: 0!important;
+}
+
+.fl {
+    float: left;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.header .title {
+    font-size: 25pt;
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* NOVEDADES */
+
+.container {
+    margin-top: 70px;
+    height: 100%;
+}
+
+.carousel-item{
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.yeseva{
+    font-family: 'Yeseva One', cursive;
+    font-size: 40pt!important;
+    color: white;
+}
+
+.carousel-item .white-text {
+    /* text-shadow: 3px 0 black, 0 0px black,
+        3px 0 black, 0 0px black; */
+    width: 550px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14pt!important;
+    font-family: var(--fuente6);
+    font-weight: 200;
+  
+}
+
+.carousel-item .white-text p {
+    margin-top: 100px;
+    font-weight: lighter;
+    text-align: center;
+
+}
+/*CONTENEDORES*/
+
+#publi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#fotolibro{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*imagen novedad*/
+#nov_img{
+    /*width: 120px;
+    height: 160px!important;*/
+    width: 200px;
+    height: 250px!important;
+    opacity: 0.7;
+    background-color: red;
+}
+
+.img_of{
+    object-fit: cover!important;
+}
+
+
+#palabras{
+    width: 60%;
+    flex-direction: column;
+}
+
+#titulo{
+    width: 55%;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    font-size: 34pt!important;
+}
+.yeseva{
+    font-family: 'Yeseva One', cursive;
+    color: white;
+}
+
+#descripcion{
+    width: 55%;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12pt!important;
+    font-family: var(--fuente6);
+    font-weight: 200;
+    position: absolute;
+    bottom: 90px;
+}
+
+/* MENU MINI */
+
+.service{
+    height: 40vh;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 37vh;
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+}
+  .card:hover {
+      background-color: rgb(186, 186, 186);
+      transition: background-color 4s;
+  }
+
+.card i{
+    color: white;
+    font-size: 35pt;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    text-align: center;
+    padding: 8px;
+    background-color: var(--body-color);
+}
+
+.stonks{
+    font-size: 33pt;
+}
+.fa-arrow-trend-up:before {
+    content: "\e098";
+    font-size: 30pt;
+}
+
+/* DESCRIPCION*/
+
+.descripcion{
+    width: 70%;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: var(--fuente6);
+}
+
+img{
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.textoDesc{
+    font-size: 11.8pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: -90px;
+    color: black;
+    font-family: var(--fuente6);
+}
+
+
+/* SOBRE NOSOTRAS */
+
+.cont-nos{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 175px;
+    margin-top: 0;
+}
+
+.cont-nos .card-nos{
+   width: 255px;
+   height: 341px;
+   padding: 30px 10px;
+   margin: 20px;
+   background: var(--primary-color-light);
+   border-radius: 20px;
+}
+
+.cont-nos .card-nos:hover{
+    transform: scale(1.1); 
+}
+
+.cont-nos .card-nos .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cont-nos .card-nos .content .img-bx{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont-nos .card-nos .content .img-bx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.cont-nos .card-nos .content .content-bx h4{
+    color: black;
+    font-size: 16pt;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.cont-nos .card-nos .content .content-bx h5{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.cont-nos .card-nos .content .sci a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 10px;
+    transition: color 0.4s;
+}
+
+.cont-nos .card-nos .content .sci a:hover{
+    color: var(--verdeclaro-color);
+}
+
+.cont-nos h2 {
+    background: var(--body-color);
+    color: white;
+    font-weight:normal;
+    font-size: 3pt;
+    padding: 15px;
+    padding-top: 10px;
+    border: 9px solid black;
+}
+.cont-nos h6{
+    color: white;
+    font-size: 12pt;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    padding-top: 5px;
+}
+.cont-nos h4{
+    color: white;
+    font-size: 14pt;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+} 
+
+/* footer */
+
+.page-footer{
+    height: 40%;
+    background-color: var(--header);
+    margin-top: 100px;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+    background-color: var(--header);
+}
+.nos-txt{
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+}
+.sobre-nos p{
+    color: black;
+}
+.sig-txt{
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+}
+.red-social{
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--body-color);
+    text-decoration: none;
+}
+.footer2{
+    height: 60px;
+    text-align: center;
+    background-color: var(--footer);
+    margin-top: -20px;
+}
+.footer2 p{
+    margin-top: 20px;
+    color: black;
+}
+.fa-twitter{
+    color: black;
+}
+.fa-youtube{
+    color: black;
+}
+.fa-instagram{
+    color: black;
+}
+.fa-facebook{
+    color: black;
+}
+.fa-twitter:hover {
+    content: "\f099";
+    color: var(--verdeclaro-color);
+    transition: color 0.4s;
+}
+.fa-facebook:hover {
+    content: "\f099";
+    color: var(--verdeclaro-color);
+    transition: color 0.4s;
+}
+.fa-instagram:hover {
+    content: "\f099";
+    color: var(--verdeclaro-color);
+    transition: color 0.4s;
+}
+.fa-youtube:hover {
+    content: "\f099";
+    color: var(--verdeclaro-color);
+    transition: color 0.4s;
+}
+
+
+
+@media (orientation: portrait) {
+    .cont-nos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        margin-left: 50px;
+    }
+    .carousel-item .black-text {
+        margin-top: 70px;
+        font-weight: bold;
+    }
+    
+    .carousel-item .black-text p {
+        margin-top: 30px;
+        font-weight: lighter;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+@media (orientation: portrait) {
+    .textoDesc{
+        font-size: 8pt;
+    }
+    .descripcion{
+        width: 90%;
+    }
+    .yeseva{
+            font-family: 'Yeseva One', cursive;
+            font-size: 30pt!important;
+            color: white;
+    }
+    .carousel-item .white-text {
+        /* text-shadow: 3px 0 black, 0 0px black,
+            3px 0 black, 0 0px black; */
+        width: 250px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 9pt!important;
+        font-family: var(--fuente6);
+        font-weight: 200;
+      
+    }
+    .container {
+        margin-top: 70px;
+        height: 100%;
+        margin-bottom: -30px;
+    }
+    #nov_img{
+        /*width: 120px;
+        height: 160px!important;*/
+        width: 100px;
+        height: 200px!important;
+        opacity: 0.7;
+        background-color: red;
+    }
+    
+    .img_of{
+        object-fit: cover!important;
+    }
+    
+    
+    #palabras{
+        width: 60%;
+        flex-direction: column;
+        margin-bottom: 60px;
+        margin-top: -20px!important;
+    }
+    
+    #titulo{
+        width: 55%;
+        text-align: center;
+        position: absolute;
+        top: 50px;
+    
+        font-size: 20pt!important;
+    }
+}

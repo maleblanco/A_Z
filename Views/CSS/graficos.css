@@ -1,0 +1,311 @@
+/*como importar fuentes desde google*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Yeseva+One&display=swap&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ---coloress--- */
+    --body-color:    #9D6B53;
+    --header: #A07754;
+    /*--body-color: #C69DC4;*/
+    --sidebar-color: #DDB892;
+    --primary-color: #C19071;
+    --primary-color-light: #B08968;
+    --toggle-color: #E9C4CC;
+    --text-color: black;
+    --verde-color: #BDB2FF;
+    --verdeclaro-color: #F9DEDC;
+    --letra-negra: black;
+    --letra-blanca: white;
+    --footer: #7f5539;
+    --body-verdadero: #faedcd;
+
+    /* ---transiciones--- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+    /* ---fuentes--- */
+    --fuente1: 'Abhaya Libre', serif;
+    --fuente2: 'Bellota', cursive;
+    --fuente3: 'DM Serif Text', serif;
+    --fuente4: 'Inria Serif', serif;
+    --fuente5: 'Roboto', sans-serif;
+    --fuente6: 'Poppins', sans-serif;
+    --fuente7: 'Yeseva One', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #faedcd!important;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+    font-weight: 300!important;
+}
+
+.header .title{
+    font-weight: 400!important;
+}
+.header {
+    position: fixed;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif!important;
+    font-weight: 300!important;
+    font-style: italic!important;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.109);
+}
+
+.container{
+    z-index: 0!important;
+}
+
+.fl {
+    float: left;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.header .title {
+    font-size: 25pt;
+    color: white;
+    margin-top: -11px;
+}
+
+
+.btn_volver{
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	border-radius: 180px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: var(--body-color); /* Color de fondo */
+	padding: 18px 20px; /* Relleno del boton */
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+    text-align: center;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+    border: none;
+}
+.btn_volver:hover{
+    background-color: var(--sidebar-color); /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
+h5{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20pt;
+    font-weight: normal;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .btn-volver {
+       font-size: 14px;
+       padding: 12px 20px;
+       bottom: 20px;
+       right: 20px;
+   }
+} 
+
+
+body{
+    background-color: #ededed;
+  }
+  .board{
+      margin: auto;
+      width: 55%;
+      height: 450px;
+      background-color: var(--primary-color);
+      padding: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+  }
+  .titulo_grafica{
+      width: 100%;
+      height: 10%;
+  }
+  .titulo_grafica>h3{
+      padding: 0;
+      margin: 0px;
+      text-align: center;
+      color: #666666;
+  }
+  .sub_board{
+      width: 100%;
+      height: 90%;
+      padding: 10px;
+      margin-top: 0px;
+      background-color:var(--sidebar-color);
+      overflow: hidden;
+      box-sizing: border-box;
+  }
+  .sep_board{
+      width: 100%;
+      height: 10%;
+  }
+  .cont_board{
+      width: 100%;
+      height: 80%;
+  }
+  .graf_board{
+      width: 85%;
+      height: 100%;
+      float: right;
+      margin-top: 0px;
+      background-color: var(--body-verdadero);
+      border-left: 2px solid #999999;
+      border-bottom: 2px solid #999999;
+      box-sizing: border-box;
+      display: flex;
+      background-color: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, 
+      rgba(0,0,0,0) 9.5%,  rgba(0,0,0,0.3) 10%, rgba(0,0,0,0) 10.5%, 
+      rgba(0,0,0,0) 19.5%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0) 20.5%, 
+      rgba(0,0,0,0) 29.5%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0) 30.5%, 
+      rgba(0,0,0,0) 39.5%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 40.5%, 
+      rgba(0,0,0,0) 49.5%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 50.5%, 
+      rgba(0,0,0,0) 59.5%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 60.5%, 
+      rgba(0,0,0,0) 69.5%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 70.5%, 
+      rgba(0,0,0,0) 79.5%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 80.5%, 
+      rgba(0,0,0,0) 89.5%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 90.5%,  
+      rgba(0,0,0,0) 100%);
+  
+      background-color: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, 
+      rgba(0,0,0,0) 9.5%,  rgba(0,0,0,0.3) 10%, rgba(0,0,0,0) 10.5%, 
+      rgba(0,0,0,0) 19.5%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0) 20.5%, 
+      rgba(0,0,0,0) 29.5%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0) 30.5%, 
+      rgba(0,0,0,0) 39.5%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 40.5%, 
+      rgba(0,0,0,0) 49.5%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 50.5%, 
+      rgba(0,0,0,0) 59.5%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 60.5%, 
+      rgba(0,0,0,0) 69.5%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 70.5%, 
+      rgba(0,0,0,0) 79.5%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 80.5%, 
+      rgba(0,0,0,0) 89.5%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 90.5%,  
+      rgba(0,0,0,0) 100%);
+  
+      background-color: linear-gradient(to bottom, rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 9.5%,  rgba(0,0,0,0.3) 10%, rgba(0,0,0,0) 10.5%, 
+      rgba(0,0,0,0) 19.5%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0) 20.5%, 
+      rgba(0,0,0,0) 29.5%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0) 30.5%, 
+      rgba(0,0,0,0) 39.5%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 40.5%, 
+      rgba(0,0,0,0) 49.5%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 50.5%, 
+      rgba(0,0,0,0) 59.5%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 60.5%, 
+      rgba(0,0,0,0) 69.5%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 70.5%, 
+      rgba(0,0,0,0) 79.5%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 80.5%, 
+      rgba(0,0,0,0) 89.5%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 90.5%, 
+      rgba(0,0,0,0) 100%);
+  
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+  }
+  .barra{
+      width:100%;
+      height: 100%;
+      margin-right: 15px;
+      margin-left: 15px;
+      background-color: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+  }
+  .sub_barra{
+      width: 100%;
+      height: 80%;
+      background: #ddaa76;
+      background: rgb(157,107,83);
+      background: linear-gradient(90deg, rgba(157,107,83,1) 0%, rgba(160,119,84,1) 35%, rgba(193,144,113,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00799b', endColorstr='#64d1be',GradientType=0 );
+      
+      -webkit-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
+  }
+  .tag_g{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+      margin-top: -20px;
+      z-index: 2;
+  }
+  .tag_leyenda{
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+  }
+  .tag_board{
+      height: 100%;
+      width: 15%;
+      border-bottom: 2px solid rgba(0,0,0,0);
+      box-sizing: border-box;
+  }
+  .sub_tag_board{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+  }
+  .sub_tag_board>div{
+      width: 100%;
+      height: 10%;
+      text-align: right;
+      padding-right: 10px;
+      box-sizing: border-box;
+  }
+  .b1{ height: 35%}
+  .b2{ height: 45%}
+  .b3{ height: 55%}
+  .b4{ height: 75%}
+  .b5{ height: 85%}
+  footer{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-family: sans-serif;
+  }

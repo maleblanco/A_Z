@@ -1,0 +1,382 @@
+/*como importar fuentes desde google*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bellota Text', cursive;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ---coloress--- */
+    --body-color:    #9D6B53;
+    --header: #A07754;
+    /*--body-color: #C69DC4;*/
+    --sidebar-color: #DDB892;
+    --primary-color: #C19071;
+    --primary-color-light: #B08968;
+    --toggle-color: #E9C4CC;
+    --text-color: black;
+    --verde-color: #BDB2FF;
+    --verdeclaro-color: #F9DEDC;
+    --letra-negra: black;
+    --letra-blanca: white;
+    --footer: #7f5539;
+
+	/* ---transiciones--- */
+	--tran-03: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-04: all 0.3s ease;
+	--tran-05: all 0.3s ease;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-color);
+}
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+.menuabajito{   
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow-x: scroll;
+    height: 80px;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.menuabajito li{
+    margin: -5px;
+    line-height: 0px;
+    color:#000000;
+    font-weight: bold;
+    /*line-height: 16px;*/  
+}
+
+.menuabajito i{
+    color: var(--toggle-color);
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* HEADERRRRRRR */
+
+header {
+    height: 80px;
+    width: 100%;
+}
+
+
+.header {
+    position: fixed;
+    background-color: var(--primary-color-light);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.109);
+}
+
+.container{
+    z-index: 0!important;
+}
+
+.fl {
+    float: left;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.header .title {
+    font-size: 25pt;
+    margin-top: 20px;
+}
+
+
+.banner {
+    height: 500px;
+    width: 100%;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBanner{
+    height: 500px;
+    width: 100%;
+    background-image: url(../Img/uno.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bannerInfo{
+    color: #000000;
+    width: 100%;
+    /*height: auto;*/
+}
+
+.bannerTitle{
+    color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 40pt;
+    margin-top: 150px;
+}
+
+.bannerDesc{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    font-size: 40pt;
+}
+
+.subrayado{
+    color: rgb(220, 236, 220);
+    margin-left: 9px;
+}
+
+#btnLink{
+    text-decoration: none; 
+    color: black;
+}
+
+.btn{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-color);
+    border-radius: 8px;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.bannerInfo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn::after{
+    content: "";
+    display: block;
+
+    width: 0px;
+    height: 24px;
+    overflow: hidden;
+    background-image: url(../Img/login.png);
+    background-repeat: no-repeat;
+
+    transition: width 200ms, margin-left 200ms;
+}
+
+.btn:hover{
+    background-color: #3b56a4;
+}
+
+.btn:is(:hover,:focus)::after{
+    width: 24px;
+    margin-left: 8px;
+}
+
+.pie-pagina{
+    margin-top: 300px;
+    width: 100%;
+    background-color: #642a63;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box-nos h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box-nos p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .box-siguenos h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box-siguenos p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #492449;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: var(--primary-color-light);
+}
+.pie-pagina .grupo-2{
+    background-color: #492449;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+
+
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+    .menuabajito li{
+        margin-top: 0px;
+        line-height: 0px;
+        font-size: 12px;
+    }
+    .menuabajito li{
+        margin: 5px;
+        line-height: 0px;
+        line-height: 16px;
+    }
+}
+@media (orientation: portrait) {
+    .pie-pagina .grupo-1 .box figure img{
+        display: none;
+    } 
+    .pie-pagina .grupo-1 .box-nos h2{
+        display: flex;
+        justify-content: center;
+    }
+    .pie-pagina .grupo-1 .box-nos p{
+        display: flex;
+        justify-content: center;
+        margin-left: 8px;
+    }
+
+    .pie-pagina .grupo-1 .box-siguenos h2{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .pie-pagina .grupo-1 .box-siguenos p{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .pie-pagina .grupo-1 .red-social{
+        display: flex;
+        justify-content: center;
+    } 
+    header {
+        height: 30px;
+        width: 100%;
+    }
+
+    .bannerTitle{
+        color: black;
+        font-size: 30pt;
+        margin-top: 90px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .bannerDesc{
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        font-size: 20pt;
+        margin-top: -46px;
+    }
+
+    .subrayado{
+        color: rgb(220, 236, 220);
+        margin-left: 9px;
+    }
+
+    .banner {
+        width: 100%;
+    }
+    .imgBanner{
+        height: 100%;
+        width: 100%;
+        background-image: url(../Img/banner66.png);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
